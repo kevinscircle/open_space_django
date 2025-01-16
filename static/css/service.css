@@ -1,0 +1,268 @@
+.service *,
+.service *:before,
+.service *:after {
+    /* i havent done in index to affect all just here for property below */
+    box-sizing: border-box;
+}
+
+
+.service :after {
+    content: "";
+}
+
+
+
+.service {
+    /* padding: 100px 0; */
+    background: lightblue;
+    min-height: 100vh;
+    color: white;
+    font-size: 14px;
+    line-height: 1.4;
+    overflow: hidden;
+
+    /* -webkit-font-smoothing: antialiased; */
+}
+
+.nav-container {
+    /* height: 100vh; */
+    /* background: greenyellow; */
+    position: fixed;
+    z-index: 50;
+   margin-top: 50px;
+}
+
+.side-bar ul {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.side-bar ul .nav-cube {
+    /* position: relative; */
+    width: 70px;
+    cursor: pointer;
+    background: crimson;
+    text-transform: uppercase;
+    transition: all .4s ease-out;
+    /* because a link i need to force inline-block  */
+    display: inline-block;
+    /* need for bootstrap link headache  */
+    color: inherit;
+}
+
+.side-bar ul .nav-cube:after {
+    position: absolute;
+    background: white;
+    color: crimson;
+    top: 0;
+    left: 70px;
+    width: 70px;
+    height: 100%;
+    opacity: .5;
+    transform: perspective(400px) rotateY(90deg);
+    transform-origin: 0 100%;
+    transition: all .4s ease-out;
+}
+
+.side-bar ul .nav-cube:nth-child(1):after {
+    content: "Home";
+    line-height: 88px;
+}
+
+.side-bar ul .nav-cube:nth-child(2):after {
+    content: "Profile";
+    line-height: 88px;
+}
+
+.side-bar ul .nav-cube:nth-child(3):after {
+    content: "Chat GPT";
+    line-height: 88px;
+}
+
+.side-bar ul .nav-cube:nth-child(4):after {
+    content: "Say hi";
+    line-height: 88px;
+}
+
+.side-bar ul .nav-cube:hover {
+    transform: translateX(-70px);
+}
+
+.side-bar ul .nav-cube:hover:after {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0deg) scale(1);
+}
+
+
+.side-bar ul .nav-cube>div {
+    display: inline-block;
+    padding: 25px 0;
+    background: transparent;
+}
+
+.side-bar ul .nav-cube img {
+    width: 30px;
+
+}
+
+
+
+
+
+
+
+
+/*#region */
+.service-sidebar {
+    margin-left: 100px;
+    padding: 20px;
+}
+
+.service-sidebar h1 {
+
+    font-size: 52px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px #DC143C,
+        2px 2px 0px #DC143C,
+        3px 3px 0px #DC143C,
+        4px 4px 0px #DC143C;
+}
+
+.service-sidebar h2 {
+    font-size: 24px;
+}
+
+/*#endregion*/
+
+/*#region links for side navbar */
+
+
+:root {
+    --primary-color: #D96AA7;
+    --secondary-color: #422C73;
+    --complimentary-color: #88BFB5;
+    --contrast-color: #F2E527;
+    --light-color: #D2A9D9;
+    --navbar-height: 18.6vh;
+}
+
+
+
+.test-container {
+    /* background: #191919; */
+    min-height: 100vh;
+    font-family: Montserrat, sans-serif;
+    position: relative;
+    overflow: hidden;
+    /* padding-top: var(--navbar-height);  */
+}
+
+.test-container section {
+    position: fixed;
+    top: var(--navbar-height);
+    bottom: var(--navbar-height);
+    left: 0;
+    height: calc(100vh - var(--navbar-height));
+    width: 100%;
+    opacity: 0;
+    transition: all ease-in .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    pointer-events: none;
+
+}
+
+.test-container section h1 {
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    opacity: 0;
+}
+
+
+
+
+
+/* Styles applied on trigger */
+
+
+.test-container section:target {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+.test-container section:target h1 {
+    opacity: 0;
+    animation: 2s fadeIn forwards .5s;
+}
+
+
+
+#first {
+    background: var(--primary-color);
+}
+
+#second {
+    background: var(--complimentary-color);
+}
+
+#third {
+    background: var(--contrast-color);
+}
+
+#fourth {
+    background: var(--light-color);
+}
+
+/* @keyframes fadeIn {
+    100% {
+        opacity: 1
+    }
+} */
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/*#endregion*/
+
+
+
+
+/*#region service nav content*/
+
+.service-content{
+    min-height : 100vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.center-service{
+    /* background-color: green; */
+    min-height: 100%;
+    width: 90%;
+   
+}
+
+
+/*#endregion*/

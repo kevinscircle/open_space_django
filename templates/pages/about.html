@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} About {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="about">
+   <div class="container">
+     <div class="row">
+       <div class="column1">
+         <span class="tagline">Welcome to OpenSpace</span>
+         <h1>
+            <span id="ownerName" class="wrap">{{owner}}</span>
+         </h1>
+         {% for to_rotate_style in to_rotate_styles %}
+          <p>{{to_rotate_style}}</p>
+         {% endfor %}
+         <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
+           architecto veniam cum quibusdam ex. Assumenda quam soluta
+           accusantium a optio enim, laborum ipsa. Dignissimos incidunt id
+           perspiciatis distinctio. Rerum repudiandae quo in. Illo fuga ab,
+           laboriosam esse commodi ratione hic saepe, porro incidunt ex vero,
+           cupiditate voluptas consequatur unde architecto.
+         </p>
+         <button>
+           Let's Connect
+           <div class="icon-container">
+             <img
+               class="right-arrow"
+               src="{% static 'icons/rightArrowCircle.png' %}"
+               alt="right arrow"
+             />
+           </div>
+         </button>
+       </div>
+       <div class="column2">
+      
+    
+             <div
+               class=
+             >
+               <img
+                 class="ghost-image"
+                 src="{% static 'img/ghost.jpg' %}"
+                 alt="ghost"
+               />
+             </div>
+       
+       </div>
+     </div>
+   </div>
+ </div>
+
+
+
+{% endblock %}

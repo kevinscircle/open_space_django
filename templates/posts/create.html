@@ -1,0 +1,28 @@
+{% extends "pages/service.html" %}
+
+{% load static %}
+
+{% block title %} Create {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+<link rel="stylesheet" href="{% static 'css/create.css' %}">
+{% endblock %}
+
+{% block service_content %}
+
+<div>
+    <h1> Create a new post </h1>
+</div>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <div>
+            <a href="{% url 'post_list'%}"></a>
+            <button>Save Post</button>
+        </div>
+    </form>
+ 
+
+{% endblock %}

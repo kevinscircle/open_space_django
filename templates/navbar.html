@@ -1,0 +1,70 @@
+<nav class="custom">
+  <div class="custom-container">
+    <ul class="custom-list">
+      <li class="custom-links">
+        <a class="custom-h1" data-name="home" href="{% url 'home' %}"> Home </a>
+      </li>
+      <li class="custom-links">
+        <a class="custom-h1" data-name="about" href="{% url 'about' %}"
+          >About
+        </a>
+      </li>
+      <li class="custom-links">
+        <a class="custom-h1" data-name="service" href="{% url 'service' %}"> Service </a>
+      </li>
+      <li class="custom-links">
+        <a class="custom-h1" data-name="contact" href="{% url 'contact' %}"> Contact </a>
+      </li>
+    </ul>
+  </div>
+  <div class="nav-menu-burger">
+    <input type="checkbox" id="check" />
+    <label class="bar" for="check">
+      <span class="top"></span>
+      <span class="middle"></span>
+      <span class="bottom"></span>
+    </label>
+    {% if user.is_authenticated %}
+    <div class="drop-down-menu">
+      
+      <a class="drop-down-item">{{ user.username }}</a>
+      <a class="drop-down-item">Account</a>
+      <a class="drop-down-item">Appearance</a>
+      <a class="drop-down-item" href="{% url 'logout' %}">Logout</a>
+    </div>
+      <!-- <a class="drop-down-item">Notifications</a> -->
+      {% else %}
+    <div class="drop-down-menu">
+      <a class="drop-down-item" href="{% url 'login' %}">Login</a>
+    </div>
+      {% endif %}
+    
+  </div>
+</div>
+</nav>
+
+
+
+    <!-- <div class="nav-menu-burger">
+      <label class="bar" for="check">
+        <input type="checkbox" id="check" />
+        <span class="top"></span>
+        <span class="middle"></span>
+        <span class="bottom"></span>
+      </label>
+      <div class="drop-down-menu">
+        <a class="drop-down-item"> Login </a>
+        <a class="drop-down-item"> Account </a>
+        <a class="drop-down-item"> Appearance </a>
+        <a class="drop-down-item"> Accessibility </a>
+        <a class="drop-down-item"> Notifications </a>
+      </div>
+    </div>
+  </div>
+</nav> -->
+
+<!-- <ul class="drop-down">
+    <li class="drop-down-menu"><a class="drop-down-item" href="#">Action</a></li>
+    <li class="drop-down-menu"><a class="drop-down-item" href="#">Action</a></li>
+    <li class="drop-down-menu"><a class="drop-down-item" href="#">Action</a></li>
+  </ul> -->

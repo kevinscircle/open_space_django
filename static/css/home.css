@@ -1,0 +1,185 @@
+.home {
+    /* background-color: rgb(139, 5, 139); */
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* This will center content vertically */
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.home-title {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    gap: 10px;
+    font-family: inherit;
+    font-weight: 700;
+    /* for django font-size added */
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: #7e97b8;
+    background-color: #e0e8ef;
+    border-style: solid;
+    border-width: 2px 2px 2px 2px;
+    border-color: rgba(255, 255, 255, 0.333);
+    border-radius: 40px 40px 40px 40px;
+    padding: 16px 24px 16px 28px;
+    transform: translate(0px, 0px) rotate(0deg);
+    transition: 0.2s;
+    box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+    margin-top: 40px;
+
+}
+
+.home-title:hover {
+    color: #516d91;
+    background-color: #E5EDF5;
+    box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+}
+
+.home-title:active {
+    box-shadow: none;
+}
+
+.home img {
+    animation: updown 3s linear infinite;
+
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/*#region mission section*/
+
+.mission {
+    padding: 1px;
+
+}
+
+.bg-img {
+    min-height: 600px;
+    background: url("../img/Saturn-1920x1080.jpg") no-repeat center;
+    background-size: cover;
+}
+
+
+.mission-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
+    height: 540px;
+    width: 55%;
+    max-width: 960px;
+    background: url(' https://i.pinimg.com/736x/fe/c8/c8/fec8c8dc44fdca62a1d81b3656285e07.jpg') no-repeat fixed center;
+    background-size: 960px 1080px;
+    box-shadow: 8px 9px 25px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    border-radius: 40px;
+    text-align: center;
+
+
+}
+
+.mission h2 {
+    letter-spacing: 10px;
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 52px;
+    color: #fff;
+}
+
+.mission p {
+    color: #fff;
+    width: 60%;  /* because of me */
+    font-size: 15px;
+    margin-left: 20%;   /*not sure why display flex not working here */
+
+}
+
+
+/*#endregion*/
+
+
+/*#region vision section*/
+
+.vision {
+    /* background: url('../assets/img/cityLandscape.jpg') no-repeat center fixed;
+    height: 500px;
+    width: 700px;
+
+    transform: rotate(90deg); */
+
+    /* background-size: cover; */
+
+    /* min-height: 1535px; */
+
+    min-height: 500px;
+    background: url('../img/cityLandscape.jpg') no-repeat center fixed;
+    background-size: cover;
+    /* transform: rotate(90deg) scale(.33); */
+   
+
+  
+    
+}
+
+
+/*#endregion*/
+
+
+
+/*#region test section*/
+
+/* 
+.second-section {
+    min-height: 600px;
+    background: url("http://www.pixelstalk.net/wp-content/uploads/2016/05/Hipster-Wallpapers-High-Quality-Free-Download.jpg") no-repeat center;
+    background-size: cover;
+
+
+
+  }
+    
+  
+  
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    gap: 50px;
+    
+    
+    
+    */
+
+
+
+
+
+
+
+
+/*#endregion*/

@@ -1,0 +1,130 @@
+.about {
+    /* background i can use properties on same line vs background image */
+    background: url('../img/space2.jpeg') no-repeat center;
+    min-height: 100vh;
+    background-size: cover; 
+
+    padding: 260px 0 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    /* background-color: teal; */
+    /* opacity: 23; */
+    opacity: 0.9.9;
+    background: rgba(82, 83, 103, 0.4);
+    border-radius: 200px;
+    height: 620px;
+    width: 1300px;
+    padding-top: 20px;
+
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.column1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+}
+.tagline{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 16px;
+    padding: 8px 10px;
+    color: #fff;
+}
+
+
+.about h1 {
+    font-size: 65px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    line-height: 1;
+    margin-bottom: 20px;
+    /* display: block; */
+    color: #fff;
+}
+
+.wrap {
+    border-right: 0.08em solid #666;
+}
+.about p{
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    line-height: 1.5em;
+    width: 96%;
+
+}
+
+
+
+
+.about button{
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    border: 0;
+    background-color: transparent;
+}
+
+
+.right-arrow {
+    transform: scale(0.75);
+    height: 48px;
+    width: 48px;
+    background-size: cover;
+    /* margin: 14px 2px; */
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.3s ease-in-out;
+    /* background-image: url("../assets/icons/rightArrowCircle.png") no-repeat center; */
+}
+
+.about button:hover .right-arrow {
+    margin-left: 25px;
+}
+
+
+.column2 {
+    /* width: 550px; */
+}
+
+.ghost-image {
+    height: 600px;
+    width: 375x;
+    border-radius: 190px;
+
+    animation: updown 3s linear infinite;
+}
+
+
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}

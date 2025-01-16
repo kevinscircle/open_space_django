@@ -1,0 +1,44 @@
+{% extends "pages/service.html" %}
+
+{% load static %}
+
+{% block title %} details {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+{% endblock %}
+
+{% block service_content %}
+<div class="details_container">
+    <div>
+        <h1>Post Details</h1>
+    </div>
+    <div class="post_details">
+        <div class="body_details">
+            <h1>{{ post.title }}</h1>
+            <p>{{ post.content }}</p>
+            <label>Created by: {{post.author.username}}</label>
+            <label>Created on: {{post.created_on}}</label>
+            <hr>         
+            <div class="box">
+                <a class="btn_details">Update</a>
+                <div class="space">
+                    <span style="--i: 31" class="star"></span>
+                    <span style="--i: 12" class="star"></span>
+                    <span style="--i: 57" class="star"></span>
+                    <span style="--i: 93" class="star"></span>
+                    <span style="--i: 23" class="star"></span>
+                    <span style="--i: 70" class="star"></span>
+                    <span style="--i: 6" class="star"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+{% endblock %}

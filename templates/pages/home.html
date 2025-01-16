@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="home">
+    <a class="home-title" href="{% url 'about' %}" >Welcome To Open Space</a>
+    <img src="{% static 'img/spacemanStar.png'%}" alt="spaceman" />
+  </div>
+  <div>
+    <section class="mission bg-img">
+      <div class="mission-image">
+        <h2>Our Mission</h2>
+        <p>
+            Open Space is dedicated to promoting peace, unity, and
+          understanding among all beings. We strive to create a world where
+          everyone feels safe, heard, and valued. We believe in the power of
+          positive change and believe that everyone has the opportunity to
+          contribute to a better world.
+        </p>
+      </div>
+    </section>
+  </div>
+  <div>
+    <section class="vision">
+
+    </section>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Contact {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="contact">
+    <div class="contact-container-outer">
+      <div class="contact-container">
+        <div class="contact-img-container">
+        
+              <img class="" id="connect-image"  src='https://i.pinimg.com/564x/bb/6a/8f/bb6a8fc5f8cbc5d48f1d6e40d0bce8ee.jpg' alt="Contact Us"/>
+       
+        </div>
+        <div class="form-container">
+          
+              <div class=>
+              <h2>Get In Touch</h2>
+              <form onSubmit={handleSubmit}>
+                <section class="form-grid">
+                  <div>
+                    <input type="text" placeholder="First Name"  />
+                  </div>
+                  <div>
+                    <input type="text"  placeholder="Last Name" />
+                  </div>
+                  <div>
+                    <input type="email"  placeholder="Email Address"  />
+                  </div>
+                  <div>
+                    <input type="tel"  placeholder="Phone No." />
+                  </div>
+                  <div class="form-message">
+                    <textarea rows="6"  placeholder="Message" ></textarea>
+                    <div class="form-button"> 
+                      <button  type="submit"><span>Send</span></button>
+                 </div>
+                  </div>
+               
+                 
+                    <div>
+                      <p class="" >{status.message}</p>
+                    </div>
+           
+                </section>
+              </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Service {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="service">
+    <div class="nav-container">
+      <nav class="side-bar">
+        <ul>
+          <a class="nav-cube" href="{% url 'post_list' %}">
+            <div>
+              <img src="{% static 'icons/spaceShip.png' %}" alt="space ship" />
+            </div>
+        </a>
+          <a class="nav-cube" href="{% url 'post_create' %}">
+            <div >
+              <img src="{% static 'icons/profile.png' %}" alt="profile" />
+            </div>
+        </a>
+          <a to="gptSearch" class="nav-cube">
+            <div>
+              <img src="{% static 'icons/search.png' %}" alt="search" />
+            </div>
+        </a>
+          <a to="info" class="nav-cube">
+            <div>
+              <img src="{% static 'icons/info.png' %}" alt="info" />
+            </div>
+        </a>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="service-sidebar">
+      <h1>Welcome to Open Space</h1>
+      <h2>Explore</h2>
+    </section> 
+
+    <section class="service-content">
+        <div class="center-service">
+        {% block service_content %} 
+        {% endblock %}
+  
+        </div>
+
+    </section>
+
+    <!-- <div class="test-container">
+      <section id="first">
+        <h1>First</h1>
+      </section>
+
+      <section id="second">
+        <h1>Second</h1>
+      </section>
+
+      <section id="third">
+        <h1>Third</h1>
+      </section>
+
+      <section id="fourth">
+        <h1>Fourth</h1>
+      </section>
+    </div> -->
+  </div>
+
+{% endblock %}
