@@ -1,3 +1,24 @@
+/* top of post section buttons  */
+
+.service_welcome {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+
+/* post for loop  */
+
+.post_flex{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 40px;
+  padding: 50px;
+
+}
+
+
 .post_container {
   position: relative;
   background: transparent;
@@ -40,7 +61,7 @@
   transform: translate(-50%, -50%);
   max-width: 120px;
   max-height: 75%;
-  border-radius: 10%;
+  border-radius: 8px;
   object-fit: contain;
   filter: drop-shadow(2px 2px 2px #1818188a);
   transition: all .3s ease-in-out;
@@ -108,7 +129,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #b8854b;
+  background: linear-gradient(to bottom left, #D047EB , #53298A );;
   margin-top: auto;
   width: 75px;
   height: 25px;
@@ -125,7 +146,7 @@
 }
 
 .post_container .content .detail .btn_create:hover {
-  background: #d39f63;
+  background: linear-gradient(to bottom left, #D047EB , #53298A );
 }
 
 .card .content .product-image {
@@ -160,7 +181,7 @@
   margin: auto;
   width: 7rem;
   height: auto;
-  border-radius: 10%;
+  border-radius: 8px;
 }
 
 .fil-shoes1,
@@ -196,7 +217,8 @@
   font-weight: 600;
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
-  background: #DC143C;
+  /* background: #DC143C; */
+  background: transparent;
   padding: calc(var(--size) / 3) var(--size);
   border: none;
   cursor: pointer;
@@ -246,4 +268,34 @@
   100% {
     transform: rotate(-30deg) translateY(calc(52% * var(--i)));
   }
+}
+
+
+
+/* update button */
+
+.btn_update{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: green; */
+  /* color: #FFFFFF; */
+  /* padding: calc(var(--size) / 3) var(--size);
+  border: none;
+  border-radius: 8px; */
+  cursor: pointer;
+  /* font-weight: 600;
+  font-size: 1.5rem; */
+  /* letter-spacing: 0.2rem;
+  outline: 1px solid var(--clr-shadow__border); */
+  width: 200px;
+  height: 66.6px;
+  /* border-radius: 33px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer; */
+  /* color: var(--clr-text); */
+  /* margin-left: 25px; */
+ 
+
 }

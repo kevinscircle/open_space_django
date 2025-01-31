@@ -11,8 +11,8 @@
 
 {% block service_content %}
 <div>
-    <div>
-        <h1>All Posts</h1> <div class="box">
+    <div class="service_welcome">
+      <div class="box">
           <a class="btn_details" href="{% url 'post_create' %}">Add post</a>
           <div class="space">
               <span style="--i: 31" class="star"></span>
@@ -24,10 +24,42 @@
               <span style="--i: 6" class="star"></span>
           </div>
       </div>
+
+      <div class="box">
+        <a class="btn_details btn_update" href="#">Notifications</a>
+        <div class="space">
+            <span style="--i: 31" class="star"></span>
+            <span style="--i: 12" class="star"></span>
+            <span style="--i: 57" class="star"></span>
+            <span style="--i: 93" class="star"></span>
+            <span style="--i: 23" class="star"></span>
+            <span style="--i: 70" class="star"></span>
+            <span style="--i: 6" class="star"></span>
+        </div>
+    </div>
+
+      <!-- <div class="btn_container">
+        <a class="btn_update" href="#">
+          Notifications
+        </a>
+      </div> -->
+
+      <div class="box">
+        <a class="btn_details btn_update" href="{% url 'product' %}">Merchandise</a>
+        <div class="space">
+            <span style="--i: 31" class="star"></span>
+            <span style="--i: 12" class="star"></span>
+            <span style="--i: 57" class="star"></span>
+            <span style="--i: 93" class="star"></span>
+            <span style="--i: 23" class="star"></span>
+            <span style="--i: 70" class="star"></span>
+            <span style="--i: 6" class="star"></span>
+        </div>
+    </div>
     </div>
 
 {# Node list #}
-
+<div class="post_flex">
 {% for post in post_list %}
     <div class="post_container"> 
     <div class="container-image">
@@ -50,7 +82,7 @@
     </div>
 
 {% endfor %}
-
+</div>
 </div>
 
 {% endblock %}

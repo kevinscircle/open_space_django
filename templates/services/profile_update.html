@@ -1,0 +1,33 @@
+{% extends "pages/service.html" %}
+
+{% load static %}
+
+{% block title %} Update Profile {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+<link rel="stylesheet" href="{% static 'css/profile_update.css' %}">
+{% endblock %}
+
+{% block service_content %}
+<div class="container-flex">
+  <div class="container">
+    <div>
+        <h1> Update Profile </h1>
+    </div>
+
+    <form class="profile_update_form" ethod="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <div>
+            <!-- <a href="{% url 'profile'%}"></a> -->
+            <button class="update_btn">Update Profile</button>
+        </div>
+    </form>
+    </div>  
+</div>
+
+
+ 
+
+{% endblock %}

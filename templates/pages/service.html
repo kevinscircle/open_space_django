@@ -19,7 +19,7 @@
               <img src="{% static 'icons/spaceShip.png' %}" alt="space ship" />
             </div>
         </a>
-          <a class="nav-cube" href="{% url 'post_create' %}">
+          <a class="nav-cube" href="{% url 'profile_update' user.id  %}">
             <div >
               <img src="{% static 'icons/profile.png' %}" alt="profile" />
             </div>
@@ -29,7 +29,7 @@
               <img src="{% static 'icons/search.png' %}" alt="search" />
             </div>
         </a>
-          <a to="info" class="nav-cube">
+          <a href="{% url 'contact' %}" class="nav-cube">
             <div>
               <img src="{% static 'icons/info.png' %}" alt="info" />
             </div>

@@ -1,0 +1,33 @@
+{% extends "pages/service.html" %}
+
+{% load static %}
+
+{% block title %} Update {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+<link rel="stylesheet" href="{% static 'css/update.css' %}">
+{% endblock %}
+
+{% block service_content %}
+<div class="container-flex">
+  <div class="container">
+    <div>
+        <h1> Update post </h1>
+    </div>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p}}
+        <div>
+            <a href="{% url 'post_list'%}"></a>
+            <button>Update Post</button>
+        </div>
+    </form>
+    </div>  
+</div>
+
+
+ 
+
+{% endblock %}

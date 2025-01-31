@@ -74,7 +74,7 @@
 
 
 
-.about button{
+.about .btn_connect{
     color: #fff;
     font-weight: 700;
     font-size: 20px;
@@ -99,7 +99,7 @@
     /* background-image: url("../assets/icons/rightArrowCircle.png") no-repeat center; */
 }
 
-.about button:hover .right-arrow {
+.about .btn_connect:hover .right-arrow {
     margin-left: 25px;
 }
 

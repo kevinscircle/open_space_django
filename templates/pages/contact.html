@@ -22,25 +22,26 @@
           
               <div class=>
               <h2>Get In Touch</h2>
-              <form onSubmit={handleSubmit}>
+              <form method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
                 <section class="form-grid">
                   <div>
-                    <input type="text" placeholder="First Name"  />
+                    <input name="first_name" type="text" placeholder="First Name"  />
                   </div>
                   <div>
-                    <input type="text"  placeholder="Last Name" />
+                    <input name="last_name" type="text"  placeholder="Last Name" />
                   </div>
                   <div>
-                    <input type="email"  placeholder="Email Address"  />
+                    <input name="email" type="email"  placeholder="Email Address"  />
                   </div>
                   <div>
-                    <input type="tel"  placeholder="Phone No." />
+                    <input name="phone" type="tel"  placeholder="Phone No." />
                   </div>
                   <div class="form-message">
-                    <textarea rows="6"  placeholder="Message" ></textarea>
+                    <textarea name="message" rows="6"  placeholder="Message" ></textarea>
                     <div class="form-button"> 
                       <button  type="submit"><span>Send</span></button>
-                 </div>
+                    </div>
                   </div>
                
                  

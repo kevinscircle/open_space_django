@@ -1,3 +1,22 @@
+
+/* colors
+DB72F0 500 pink side bar 
+    D047EB 400 pink title
+    AF66CC 400 dark pink 
+DB72F0 500 dark pink background
+53298A 500 blue  background
+
+
+
+
+
+*/
+
+
+
+
+
+
 .service *,
 .service *:before,
 .service *:after {
@@ -6,15 +25,15 @@
 }
 
 
-.service :after {
+/* .service :after {
     content: "";
-}
+} */
 
 
 
 .service {
     /* padding: 100px 0; */
-    background: lightblue;
+    background: radial-gradient(ellipse, #DB72F0, #53298A);
     min-height: 100vh;
     color: white;
     font-size: 14px;
@@ -43,7 +62,7 @@
     /* position: relative; */
     width: 70px;
     cursor: pointer;
-    background: crimson;
+    background: radial-gradient(circle,#DB72F0 , #53298A );
     text-transform: uppercase;
     transition: all .4s ease-out;
     /* because a link i need to force inline-block  */
@@ -55,7 +74,7 @@
 .side-bar ul .nav-cube:after {
     position: absolute;
     background: white;
-    color: crimson;
+    color: #DB72F0;
     top: 0;
     left: 70px;
     width: 70px;
@@ -125,10 +144,10 @@
     font-size: 52px;
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    text-shadow: 1px 1px 0px #DC143C,
-        2px 2px 0px #DC143C,
-        3px 3px 0px #DC143C,
-        4px 4px 0px #DC143C;
+    text-shadow: 1px 1px 0px #D047EB,
+        2px 2px 0px #D047EB,
+        3px 3px 0px #D047EB,
+        4px 4px 0px #D047EB;
 }
 
 .service-sidebar h2 {
@@ -263,6 +282,7 @@
     width: 90%;
    
 }
+
 
 
 /*#endregion*/

@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 
 # SignupView
 from django.views.generic.edit import CreateView
+# from django.views.generic import ListView
 from .forms import SignupForm
 from .models import Profile
 
@@ -44,29 +45,29 @@ class UserLoginView(LoginView):
 
 
 class SignUpView(CreateView):
-    template_name = 'users/signup.html'
-    form_class = SignupForm 
-    success_url = reverse_lazy('home')   # after sign up where do you want to send them 
+    template_name = "users/signup.html"
+    form_class = SignupForm
+    success_url = reverse_lazy('login')
 
+    # extend the save functionality
+    def form_valid(self, form):
+        user = form.save(commit=False)
+        passw = form.cleaned_data['password']
+        user.set_password(passw) # hash/encrypt the password
+        user.save()
 
-     # extend and save functionality 
+        # create an empty profile for the user
+        Profile.objects.create(user=user)
 
-
-    def from_valid(self, form): 
-       user =form.save(commit=False)
-       passw = form.cleaned_data['password']
-       user.set_password(passw) # hash/encript the password
-       user.save()
-
-        # create an empty profile for the user 
-
-       Profile.objects.create(user=user)
-    
-       return super().from_valid(form)
+        return super().form_valid(form)
     
 # function view
 
 def user_logout(request):
     logout(request)
     return redirect('login') # redirect to home page
+
+
+
+
 

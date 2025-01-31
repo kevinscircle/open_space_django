@@ -1,0 +1,66 @@
+.container-flex {
+
+
+}
+
+.container{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.profile_update_form {
+min-width: 400px;
+min-height: 300px;
+
+}
+
+.profile_update_form p {
+display: flex;
+flex-direction: row;
+
+}
+
+.profile_update_form label {
+    min-width: 110px;
+    text-align: right;
+    padding: 10px;
+}
+
+.profile_update_form input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 9px;
+    border-radius: 14px;
+}
+
+
+
+.update_btn{
+    margin-top: 8px;
+    margin-left: 120px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom left, #D047EB , #53298A );;
+    width: 100px;
+    height: 25px;
+    color: #ffffff;
+    font-size: 13px;
+    border: none;
+    border-radius: 8px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+  
+}
+
+

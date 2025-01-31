@@ -10,18 +10,17 @@
 
 {% block content %}
 
+
 <div class="about">
    <div class="container">
      <div class="row">
        <div class="column1">
          <span class="tagline">Welcome to OpenSpace</span>
          <h1>
-            <span id="ownerName" class="wrap">{{owner}}</span>
+          {{owner}}<span id="ownerName" class="wrap"></span>
          </h1>
-         {% for to_rotate_style in to_rotate_styles %}
           <p>{{to_rotate_style}}</p>
-         {% endfor %}
-         <p>
+          <p>
            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
            architecto veniam cum quibusdam ex. Assumenda quam soluta
            accusantium a optio enim, laborum ipsa. Dignissimos incidunt id
@@ -29,7 +28,7 @@
            laboriosam esse commodi ratione hic saepe, porro incidunt ex vero,
            cupiditate voluptas consequatur unde architecto.
          </p>
-         <button>
+         <a class="btn_connect" href="{% url 'contact' %}">
            Let's Connect
            <div class="icon-container">
              <img
@@ -38,7 +37,7 @@
                alt="right arrow"
              />
            </div>
-         </button>
+          </a>
        </div>
        <div class="column2">
       
@@ -58,6 +57,7 @@
    </div>
  </div>
 
-
+ {{ to_rotate_styles|safe|json_script:"toRotate" }}
+ <script src="{% static 'js/about.js' %}"></script>
 
 {% endblock %}

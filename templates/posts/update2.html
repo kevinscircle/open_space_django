@@ -1,0 +1,47 @@
+{% extends "pages/service.html" %}
+
+{% load static %}
+
+{% block title %} Update {% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/service.css' %}">
+<link rel="stylesheet" href="{% static 'css/update.css' %}">
+{% endblock %}
+
+{% block service_content %}
+<div class="container_flex">
+<div class="container-flex-update">
+  <div class="container">
+    <div>
+        <h1 class="heading"> Update post </h1>
+    </div>
+
+    <form class="update_form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+       <div class="upadte_field">
+        <label for="title"></label>
+        <input type="text" id="title" name="title" placeholder="Title" value={{post.title}}>
+       </div>
+       <div class="upadte_field">
+        <label for="image"></label>
+        <input type="file" id="image" name="image" placeholder="Image" class="flex_image_box" value={{post.image}}>
+       </div>
+       <div class="upadte_field">
+        <label for="content"></label>
+        <textarea id="content" name="content" rows="4" placeholder="Content" value={{post.content}}></textarea>
+       </div>
+       <div>
+            <a href="{% url 'post_list'%}"></a>
+            <button class="btn_update">Update Post</button>
+        </div>
+    </form>
+</div>  
+</div>
+</div>
+
+
+
+ 
+
+{% endblock %}

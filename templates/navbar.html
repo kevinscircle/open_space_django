@@ -9,9 +9,16 @@
           >About
         </a>
       </li>
+      {% if user.is_authenticated %}
       <li class="custom-links">
         <a class="custom-h1" data-name="service" href="{% url 'service' %}"> Service </a>
       </li>
+      {% else %}
+      <li class="custom-links">
+        <a class="custom-h1" data-name="service" href="{% url 'login' %}"> Service </a>
+      </li>
+      {% endif %}
+      
       <li class="custom-links">
         <a class="custom-h1" data-name="contact" href="{% url 'contact' %}"> Contact </a>
       </li>
@@ -28,8 +35,8 @@
     <div class="drop-down-menu">
       
       <a class="drop-down-item">{{ user.username }}</a>
-      <a class="drop-down-item">Account</a>
-      <a class="drop-down-item">Appearance</a>
+      <a class="drop-down-item">Profile</a>
+      <a class="drop-down-item">Messages</a>
       <a class="drop-down-item" href="{% url 'logout' %}">Logout</a>
     </div>
       <!-- <a class="drop-down-item">Notifications</a> -->

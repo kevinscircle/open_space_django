@@ -11,18 +11,32 @@
 
 {% block service_content %}
 <div class="details_container">
-    <div>
-        <h1>Post Details</h1>
-    </div>
     <div class="post_details">
         <div class="body_details">
-            <h1>{{ post.title }}</h1>
-            <p>{{ post.content }}</p>
-            <label>Created by: {{post.author.username}}</label>
-            <label>Created on: {{post.created_on}}</label>
-            <hr>         
+            <div class="content_flex">
+                <h1>{{ post.title }}</h1>
+                <p>{{ post.content }}</p>
+                <label>Created by: {{post.author.username}}</label>
+                <label>Created on: {{post.created_on}}</label>
+            </div>
+          
+            <hr> 
+            
+            <div class="btn_flex">
+                <div class="box">
+                    <a class="btn_details" href="{% url 'update_post' post.id %}">Update</a>
+                    <div class="space">
+                        <span style="--i: 31" class="star"></span>
+                        <span style="--i: 12" class="star"></span>
+                        <span style="--i: 57" class="star"></span>
+                        <span style="--i: 93" class="star"></span>
+                        <span style="--i: 23" class="star"></span>
+                        <span style="--i: 70" class="star"></span>
+                        <span style="--i: 6" class="star"></span>
+                    </div>
+            </div>
             <div class="box">
-                <a class="btn_details">Update</a>
+                <a class="btn_details" href="{% url 'delete_post' post.id %}">Delete</a>
                 <div class="space">
                     <span style="--i: 31" class="star"></span>
                     <span style="--i: 12" class="star"></span>
@@ -33,7 +47,15 @@
                     <span style="--i: 6" class="star"></span>
                 </div>
             </div>
+            </div>
+          
 
+        </div>
+
+        <div class="image_details">
+        {% if post.image %}
+            <img class="image" src={{post.image.url}} alt="">
+        {% endif %} 
         </div>
     </div>
 

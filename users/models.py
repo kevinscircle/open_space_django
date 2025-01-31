@@ -12,3 +12,6 @@ class Profile(models.Model):
     state = models.CharField(max_length=255)
     zip_code = models.CharField(max_length=10)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="profile")
+
+    def __str__(self):
+        return f"{self.user.username}, street:  {self.street}"
